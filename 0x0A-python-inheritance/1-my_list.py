@@ -7,10 +7,12 @@ Module with class MyList
 
 
 class MyList(list):
-    """Class with method print_sorted"""
-    pass
+    """Custom list type intended to only contain integers.
+    """
 
     def print_sorted(self):
-        """Methot that sorted a list"""
-
-        print(sorted(list(self)))
+        """Prints MyList lists in ascending order by value.
+        """
+        sorted_list = self[:]
+        sorted_list.sort()
+        print(sorted_list)
